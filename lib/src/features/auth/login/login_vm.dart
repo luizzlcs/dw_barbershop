@@ -14,11 +14,11 @@ class LoginVm extends _$LoginVm {
   LoginState build() => LoginState.initial();
 
   Future<void> login(String email, String password) async {
-    final loaderHandle = AsyncLoaderHandler()..start();
+    final loaderHandle =  AsyncLoaderHandler()..start();
 
     final loginService = ref.watch(userLoginServiceProvider);
-    
-    final result = loginService.execute(email, password);
+
+    final result = await loginService.execute(email, password);
 
     switch (result) {
       case Success():
