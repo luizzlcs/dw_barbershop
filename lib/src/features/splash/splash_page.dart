@@ -31,7 +31,6 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(),
       body: DecoratedBox(
         decoration: const BoxDecoration(
           image: DecorationImage(

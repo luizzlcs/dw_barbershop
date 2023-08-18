@@ -17,6 +17,7 @@ class LoginVm extends _$LoginVm {
     final loaderHandle = AsyncLoaderHandler()..start();
 
     final loginService = ref.watch(userLoginServiceProvider);
+    
     final result = loginService.execute(email, password);
 
     switch (result) {
